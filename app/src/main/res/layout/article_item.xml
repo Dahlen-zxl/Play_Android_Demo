@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+       <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="#f6f4f4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></View>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/home_item_circleImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/icon_author"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/home_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/home_item_circleImageView"
+        app:layout_constraintStart_toEndOf="@+id/home_item_circleImageView"
+        app:layout_constraintTop_toTopOf="@+id/home_item_circleImageView" />
+
+    <TextView
+        android:id="@+id/home_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/home_item_title"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toEndOf="@+id/home_item_title"
+        app:layout_constraintTop_toTopOf="@+id/home_item_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/home_item_contentlife"
+        app:layout_constraintTop_toTopOf="@+id/home_item_content" />
+
+    <TextView
+        android:id="@+id/home_item_contentlife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/home_item_comtentbelw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/home_item_contentlife"
+        app:layout_constraintStart_toStartOf="@+id/home_item_title"
+        app:layout_constraintTop_toBottomOf="@+id/home_item_circleImageView" />
+
+    <ImageView
+        android:id="@+id/home_item_xin"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/icon_like_article_not_selected"
+        app:layout_constraintStart_toStartOf="@+id/home_item_circleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/home_item_comtentbelw" />
+
+    <TextView
+        android:id="@+id/home_item_shi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@id/home_item_xin"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/ic_time"
+        android:gravity="center_vertical"
+        android:textColor="#2a2828"
+        app:layout_constraintBottom_toBottomOf="@+id/home_item_xin"
+        app:layout_constraintStart_toEndOf="@+id/home_item_xin"
+        app:layout_constraintTop_toTopOf="@+id/home_item_xin"
+        tools:text="14小时之前" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="home_item_comtentbelw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_ite_xiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/text_bian"
+        android:textColor="#f00"
+        app:layout_constraintBottom_toBottomOf="@+id/home_item_shi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_item_shi"
+        app:layout_constraintVertical_bias="1.0" />
+    />
+
+</android.support.constraint.ConstraintLayout>
